@@ -1,0 +1,20 @@
+[jay@JAH_X60 src]$ ./run.sh
+./processes mingetty
+0
+ps -A | grep mingetty | wc -l
+0
+
+./processes ksand
+0
+ps -A | grep kscand | wc -l
+0
+
+./processes sendmail
+0
+ps -A | grep sendmail | wc -l
+0
+
+./processes kworker
+15
+ps -A | grep kworker | wc -l
+15
