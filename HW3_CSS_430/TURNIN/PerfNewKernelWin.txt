@@ -1,0 +1,40 @@
+threadOS ver 1.0:
+Type ? for help
+threadOS: a new thread (thread=Thread[Thread-3,2,main] tid=0 pid=-1)
+-->l Test3 8
+l Test3 8
+threadOS: a new thread (thread=Thread[Thread-5,2,main] tid=1 pid=0)
+threadOS: a new thread (thread=Thread[Thread-7,2,main] tid=2 pid=1)
+threadOS: a new thread (thread=Thread[Thread-9,2,main] tid=3 pid=1)
+threadOS: a new thread (thread=Thread[Thread-11,2,main] tid=4 pid=1)
+threadOS: a new thread (thread=Thread[Thread-13,2,main] tid=5 pid=1)
+threadOS: a new thread (thread=Thread[Thread-15,2,main] tid=6 pid=1)
+threadOS: a new thread (thread=Thread[Thread-17,2,main] tid=7 pid=1)
+threadOS: a new thread (thread=Thread[Thread-19,2,main] tid=8 pid=1)
+threadOS: a new thread (thread=Thread[Thread-21,2,main] tid=9 pid=1)
+threadOS: a new thread (thread=Thread[Thread-23,2,main] tid=10 pid=1)
+threadOS: a new thread (thread=Thread[Thread-25,2,main] tid=11 pid=1)
+threadOS: a new thread (thread=Thread[Thread-27,2,main] tid=12 pid=1)
+threadOS: a new thread (thread=Thread[Thread-29,2,main] tid=13 pid=1)
+threadOS: a new thread (thread=Thread[Thread-31,2,main] tid=14 pid=1)
+threadOS: a new thread (thread=Thread[Thread-33,2,main] tid=15 pid=1)
+threadOS: a new thread (thread=Thread[Thread-35,2,main] tid=16 pid=1)
+threadOS: a new thread (thread=Thread[Thread-37,2,main] tid=17 pid=1)
+comp finished in 6031ms
+comp finished in 8027ms
+comp finished in 8789ms
+comp finished in 10720ms
+comp finished in 12700ms
+comp finished in 14699ms
+comp finished in 16760ms
+comp finished in 18624ms
+disk finished in 58492ms
+disk finished in 72408ms
+disk finished in 85631ms
+disk finished in 85724ms
+disk finished in 87928ms
+disk finished in 88837ms
+disk finished in 90594ms
+disk finished in 90690ms
+elapsed time = 90690ms
+-->

@@ -1,0 +1,25 @@
+[jahennen@uw1-320-17 src]$ java Boot
+threadOS ver 1.0:
+Type ? for help
+threadOS: a new thread (thread=Thread[Thread-3,2,main] tid=0 pid=-1)
+-->l Test3 4
+l Test3 4
+threadOS: a new thread (thread=Thread[Thread-6,2,main] tid=1 pid=0)
+threadOS: a new thread (thread=Thread[Thread-8,2,main] tid=2 pid=1)
+threadOS: a new thread (thread=Thread[Thread-10,2,main] tid=3 pid=1)
+threadOS: a new thread (thread=Thread[Thread-12,2,main] tid=4 pid=1)
+threadOS: a new thread (thread=Thread[Thread-14,2,main] tid=5 pid=1)
+threadOS: a new thread (thread=Thread[Thread-16,2,main] tid=6 pid=1)
+threadOS: a new thread (thread=Thread[Thread-18,2,main] tid=7 pid=1)
+threadOS: a new thread (thread=Thread[Thread-20,2,main] tid=8 pid=1)
+threadOS: a new thread (thread=Thread[Thread-22,2,main] tid=9 pid=1)
+comp finished in 26027ms
+comp finished in 29750ms
+comp finished in 30250ms
+comp finished in 30747ms
+disk finished in 31879ms
+disk finished in 41328ms
+disk finished in 49228ms
+disk finished in 50512ms
+elapsed time = 50512ms
+-->

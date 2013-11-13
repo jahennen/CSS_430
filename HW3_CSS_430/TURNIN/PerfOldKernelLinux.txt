@@ -1,10 +1,9 @@
-PS I:\Users\Jay\Documents\GitHub\CSS_360\CSS_430\HW3_CSS_430\src> java Boot
+[jahennen@uw1-320-17 src]$ java Boot
 threadOS ver 1.0:
-threadOS: DISK created
 Type ? for help
 threadOS: a new thread (thread=Thread[Thread-3,2,main] tid=0 pid=-1)
--->l Test3 3
-l Test3 3
+-->l Test3 4
+l Test3 4
 threadOS: a new thread (thread=Thread[Thread-5,2,main] tid=1 pid=0)
 threadOS: a new thread (thread=Thread[Thread-7,2,main] tid=2 pid=1)
 threadOS: a new thread (thread=Thread[Thread-9,2,main] tid=3 pid=1)
@@ -12,11 +11,15 @@ threadOS: a new thread (thread=Thread[Thread-11,2,main] tid=4 pid=1)
 threadOS: a new thread (thread=Thread[Thread-13,2,main] tid=5 pid=1)
 threadOS: a new thread (thread=Thread[Thread-15,2,main] tid=6 pid=1)
 threadOS: a new thread (thread=Thread[Thread-17,2,main] tid=7 pid=1)
-comp finished...
-comp finished...
-comp finished...
-disk finished...
-disk finished...
-disk finished...
-elapsed time = 83796 msec.
+threadOS: a new thread (thread=Thread[Thread-19,2,main] tid=8 pid=1)
+threadOS: a new thread (thread=Thread[Thread-21,2,main] tid=9 pid=1)
+comp finished in 36707ms
+comp finished in 37455ms
+comp finished in 39740ms
+comp finished in 40195ms
+disk finished in 100341ms
+disk finished in 102730ms
+disk finished in 103434ms
+disk finished in 103652ms
+elapsed time = 103652ms
 -->
