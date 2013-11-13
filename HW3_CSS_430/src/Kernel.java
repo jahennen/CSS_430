@@ -92,39 +92,41 @@ public class Kernel
 	    		// return a child thread id who woke me up
 	    		return waitQueue.enqueueAndSleep(myTcb.getTid());
 	    	}
+	    	return ERROR;
 		// let the current thread sleep in waitQueue under the 
 		// condition = this thread id
 	    case EXIT:
 		// get the current thread's parent id
 	    	myTcb = scheduler.getMyTcb();
-	    	if(myTcb != null) {
+	    	if(myTcb != null && myTcb.getPid() != -1) {
 	    		waitQueue.dequeueAndWakeup(myTcb.getPid(), myTcb.getTid());
+	    		scheduler.deleteThread();
+	    		return OK;
 	    	}
-	    	scheduler.deleteThread();
-		// search waitQueue for and wakes up the thread under the
+	    	return ERROR;
+	    // search waitQueue for and wakes up the thread under the
 		// condition = the current thread's parent id
 		// tell the Scheduler to delete the current thread (since it is exiting)
-		return OK;
 	    case SLEEP:   // sleep a given period of milliseconds
 		scheduler.sleepThread( param ); // param = milliseconds
 		return OK;
 	    case RAWREAD: // read a block of data from disk
 		while ( disk.read( param, ( byte[] )args ) == false )
-		    ; // busy wait
+			ioQueue.enqueueAndSleep( COND_DISK_FIN );
 		while ( disk.testAndResetReady( ) == false )
-		    ; // busy wait
+		    ioQueue.enqueueAndSleep( COND_DISK_REQ );
 		return OK;
 	    case RAWWRITE: // write a block of data to disk
 		while ( disk.write( param, ( byte[] )args ) == false )
-		    ; // busy wait
+			ioQueue.enqueueAndSleep( COND_DISK_FIN );
 		while ( disk.testAndResetReady( ) == false )
-		    ; // busy wait
+		    ioQueue.enqueueAndSleep( COND_DISK_REQ );
 		return OK;
 	    case SYNC:     // synchronize disk data to a real file
 		while ( disk.sync( ) == false )
-		    ; // busy wait
+			ioQueue.enqueueAndSleep( COND_DISK_FIN );
 		while ( disk.testAndResetReady( ) == false )
-		    ; // busy wait
+		    ioQueue.enqueueAndSleep( COND_DISK_REQ );
 		return OK;
 	    case READ:
 		switch ( param ) {
@@ -192,10 +194,10 @@ public class Kernel
 	    return ERROR;
 	case INTERRUPT_DISK: // Disk interrupts
 	    // wake up the thread waiting for a service completion
-	    //ioQueue.dequeueAndWakeup( COND_DISK_FIN );
+	    ioQueue.dequeueAndWakeup( COND_DISK_FIN );
 
 	    // wake up the thread waiting for a request acceptance
-	    //ioQueue.dequeueAndWakeup( COND_DISK_REQ );
+	    ioQueue.dequeueAndWakeup( COND_DISK_REQ );
 
 	    return OK;
 	case INTERRUPT_IO:   // other I/O interrupts (not implemented)

@@ -73,7 +73,7 @@ public class Kernel
 		scheduler.start( );
 		
 		// instantiate and start a disk
-		disk = new Disk( 1000 );
+		disk = new Disk( 10000 );
 		disk.start( );
 
 		// instantiate a cache memory

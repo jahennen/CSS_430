@@ -15,19 +15,17 @@ public class SyncQueue {
 	}
 	public SyncQueue(int condMax) {
 		queue = new QueueNode[condMax];
+		for (int i=0; i < queue.length; i++)
+			queue[i] = new QueueNode();
 	}
 	
 	// Sleeps a thread on the condition
 	public int enqueueAndSleep(int condition) {
-		if(queue[condition] == null)
-			queue[condition] = new QueueNode();
 		return queue[condition].sleep();
 	}
 	
 	// Wakes a thread on the condition once, and passes the child tid
 	public void dequeueAndWakeup( int condition, int tid ) {
-		if(queue[condition] == null)
-			queue[condition] = new QueueNode();
 		queue[condition].wakeup(tid);
 	}
 	
